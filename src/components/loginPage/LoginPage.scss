@@ -1,0 +1,69 @@
+body{
+    background-image:url(hexellence.png);
+}
+#login-page__container{
+    width: 30vw;
+    max-width: 30vw;
+    margin: 10vh  auto 0 auto;
+    background-color: #FFF;
+    box-shadow:
+        0px 0px 0px 5px rgba(255, 255, 255, 0.4),
+        0px 4px 20px rgba(0, 0, 0, 0.33);
+    border-radius: 5px;
+    #login{
+        padding: 0px 25px 25px;
+        .sep{
+            height: 1px;
+            background-color: #e0e0e0;
+            width: 30vw;
+            margin: 0px -25px;       
+        }
+        .inputs{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 25px;
+            input{
+                margin-bottom: 5%;
+                background-color: #F5F5F5;
+                font-size: 0.8rem;
+                border-radius: 3px;
+                border: none;
+                padding: 13px 10px;
+                width: 20vw;
+                box-shadow: inset 0px 2px 3px rgba(0, 0, 0, 0.1)
+            }
+            input:focus{
+                background-color: #FFF;
+                box-shadow: 0px 0px 0px 2px #29b6f6, inset 0px 2px 3px rgba(0, 0, 0, 0.2),
+                0px 5px 5px rgba(0, 0, 0, 0.15);
+                outline:none;
+
+            }
+            .header{
+                margin-bottom: 20px;
+                h2{
+                    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+                    color: #333;
+                    font-size: 24px;
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                }
+            }
+        }
+        button{
+            font-size: 1.1rem;
+            border-radius: 5px;
+            background-color: #35495E;
+            padding: 13px 10px;
+            color: white;
+            border: none;
+            width:9vw;
+        }
+        button:hover{
+            background-color: #29b6f6;
+            cursor:pointer;
+        }
+    }
+}
