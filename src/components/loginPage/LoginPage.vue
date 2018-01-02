@@ -39,7 +39,9 @@ export default {
 
       methods: {
     routeToTest() {
-      this.$router.push('test');
+       
+                    this.$router.push('test');
+
     }
   }
 }
