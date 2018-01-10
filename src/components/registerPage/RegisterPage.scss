@@ -1,7 +1,7 @@
 body{
     background-image:url(hexellence.png);
 }
-#login-page__container{
+#register-page__container{
     width: 30vw;
     max-width: 30vw;
     margin: 10vh  auto 0 auto;
@@ -10,7 +10,7 @@ body{
         0px 0px 0px 5px rgba(255, 255, 255, 0.4),
         0px 4px 20px rgba(0, 0, 0, 0.33);
     border-radius: 5px;
-    #login{
+    #register{
         padding: 0px 25px 25px;
         .sep{
             height: 1px;

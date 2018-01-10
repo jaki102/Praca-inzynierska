@@ -1,8 +1,8 @@
 <template>
-    <div id="login-page__container">
-        <div id="login">
+    <div id="register-page__container">
+        <div id="register">
             <div class="header">
-                <h2>Logowanie</h2>
+                <h2>Rejestracja</h2>
             </div>
             <div class="sep"></div>
             <div class="inputs">
@@ -10,7 +10,7 @@
                 <input type="password" v-model = "password" placeholder="password"/>
             </div>
             <div class = "error" v-html = "error" />
-            <button @click="register">Zaloguj się</button>
+            <button @click="register">Stwórz konto</button>
         </div>
     </div>
 </template>
@@ -31,9 +31,9 @@ export default {
     },
 
     methods: {
-        async login () {
+        async register () {
             try{
-                await AuthenticationService.login({
+                await AuthenticationService.register({
                     email: this.email,
                     password: this.password
                 })
