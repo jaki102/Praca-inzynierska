@@ -10,7 +10,7 @@
                 <input type="password" v-model = "password" placeholder="password"/>
             </div>
             <div class = "error" v-html = "error" />
-            <button @click="register">Zaloguj się</button>
+            <button @click="login">Zaloguj się</button>
         </div>
     </div>
 </template>
@@ -33,10 +33,12 @@ export default {
     methods: {
         async login () {
             try{
-                await AuthenticationService.login({
+                const response = await AuthenticationService.login({
                     email: this.email,
                     password: this.password
                 })
+                this.$store.dispatch('setToken', response.data.token)
+                this.$store.dispatch('setUser', response.data.user)
             } catch (error) {
                 this.error = error.response.data.error
             }

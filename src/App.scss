@@ -18,11 +18,12 @@ main {
 
 header {
   margin: 0;
-  height: 62px;
+  height: 70px;
   padding: 0 16px 0 24px;
   background-color: #35495E;
   color: #ffffff;
   display: flex;
+  justify-content: space-between;
 }
 
 header span {
@@ -37,10 +38,53 @@ header span {
   margin-top:3px;
 }
 
-.logo{
+.logo {
   background-image: url('logo.png');
   background-size: cover;
   width: 56px;
   height: 56px;
   margin: 3px 1% 0 2%;
+}
+
+.title {
+  display: flex;
+  justify-content: flex-start;
+  width: 50%;
+  ul {
+    width:50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    li{
+      display: flex;
+      font-size: 20px;
+      line-height: 1;
+      letter-spacing: .02em;
+      font-weight: 400;
+    }
+  }
+}
+
+.nav {
+  padding-right: 3%;
+  display: flex;
+  justify-content: flex-end;
+  width: 50%;
+  ul {
+    margin: 0;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    li{
+      height: 100%;
+      display: flex;
+      align-items: center;
+      padding: 0 5% 0 5%;
+      &:hover{
+        background-color:#3d4f61;
+        cursor: pointer;
+      }
+    }
+  }
 }

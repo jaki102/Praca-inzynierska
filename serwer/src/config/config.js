@@ -6,7 +6,10 @@ module.exports = {
     password: 'haslo12345',
     options: {
       dialect: 'mysql',
-      host: '212.237.20.10'
+      host: '212.237.20.10',
+      define: {
+        timestamps: false
+      }
     }
   },
   authentication: {
