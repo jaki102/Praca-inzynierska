@@ -52,5 +52,5 @@ export default {
 
 </script>
 <style lang="scss">
-@import './historyPage.scss';
+@import './HistoryPage.scss';
 </style>

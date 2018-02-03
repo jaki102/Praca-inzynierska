@@ -1,22 +1,21 @@
 /* jshint indent: 2 */
 
-module.exports = function (sequelize, DataTypes) {
-  return sequelize.define('login', {
+module.exports = function(sequelize, DataTypes) {
+  return sequelize.define('UserRentLog', {
     id: {
       type: DataTypes.INTEGER(11),
       allowNull: false,
-      primaryKey: true,
-      autoIncrement: true
+      primaryKey: true
     },
-    user: {
+    imie: {
       type: DataTypes.TEXT,
       allowNull: false
     },
-    password: {
+    nazwisko: {
       type: DataTypes.TEXT,
       allowNull: false
     }
   }, {
-    tableName: 'login'
-  })
-}
+    tableName: 'UserRentLog'
+  });
+};
