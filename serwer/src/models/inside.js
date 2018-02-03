@@ -23,11 +23,6 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.TEXT,
       allowNull: false,
       field: 'surname'
-    },
-    sciezka: {
-      type: DataTypes.CHAR(20),
-      allowNull: true,
-      field: 'sciezka'
     }
   }, {
     tableName: 'inside'

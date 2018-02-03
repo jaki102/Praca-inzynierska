@@ -12,15 +12,5 @@ module.exports = {
         error: 'An error has occured trying to show customer.'
       })
     }
-  },
-  async post (req, res) {
-    try {
-      const customer = await Customer.create(req.body)
-      res.send(customer)
-    } catch (err) {
-      res.status(500).send({
-        error: 'An error has occured trying to show bla bla..'
-      })
-    }
   }
 }

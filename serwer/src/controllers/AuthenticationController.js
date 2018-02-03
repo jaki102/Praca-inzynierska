@@ -16,7 +16,7 @@ module.exports = {
       res.send(user.toJSON())
     } catch (err) {
       res.status(400).send({
-        error: 'This email account is already in use.'
+        error: 'Ten adres e-mail jest już używany.'
       })
     }
   },
@@ -30,7 +30,7 @@ module.exports = {
       })
       if (!user) {
         return res.status(403).send({
-          error: 'The login information was incorrect'
+          error: 'Podane informacje są błędne. Spróbuj ponownie.'
         })
       }
 
@@ -39,7 +39,7 @@ module.exports = {
       console.log(isPasswordValid)
       if (!isPasswordValid) {
         return res.status(403).send({
-          error: 'The login information was incorrect'
+          error: 'Podane informacje są błędne. Spróbuj ponownie.'
         })
       }
 
@@ -50,7 +50,7 @@ module.exports = {
       })
     } catch (err) {
       res.status(500).send({
-        error: 'An error has occured trying to log in.'
+        error: 'Błąd wystąpił podczas próby logowania'
       })
     }
   }

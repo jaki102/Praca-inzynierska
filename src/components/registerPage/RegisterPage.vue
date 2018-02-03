@@ -47,5 +47,5 @@ export default {
   }
 </script>
 <style lang="scss">
-@import './LoginPage.scss';
+@import './RegisterPage.scss';
 </style>

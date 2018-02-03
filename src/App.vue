@@ -8,12 +8,16 @@
         </ul>
       </div>
       <div class = "nav">
-        <ul>
-          <li v-if = "!$store.state.isUserLoggedIn"> Rejestracja </li>
-          <li v-if = "!$store.state.isUserLoggedIn"> Zaloguj się </li>
-          <li v-if = "$store.state.isUserLoggedIn"> Wypożyczenia </li>
-          <li v-if = "$store.state.isUserLoggedIn"> Statystyki </li>
-          <li v-if = "$store.state.isUserLoggedIn"> Wyloguj się </li>
+        <ul class = "log" v-if = "!$store.state.isUserLoggedIn">
+          <li @click = "navigateTo({name: 'RegisterPage'})"> Rejestracja </li>
+          <li @click = "navigateTo({name: 'LoginPage'})"> Zaloguj się </li>
+        </ul>
+        <ul class = "opt" v-if = "$store.state.isUserLoggedIn">
+          <li @click = "navigateTo({name: 'Test'})"> Aktualności </li>
+          <li @click = "navigateTo({name: 'LoanPage'})"> Wypożyczenia </li>
+          <li @click = "navigateTo({name: 'StatisticPage'})"> Statystyki </li>
+          <li @click = "navigateTo({name: 'HistoryPage'})"> Historia </li>
+          <li @click = "logout"> Wyloguj się </li>
         </ul>
       </div>
     </header>
@@ -25,8 +29,21 @@
 
 <script>
 export default {
-  name: 'app'
+  name: 'app',
+  methods: {
+    navigateTo (route) {
+      this.$router.push(route)
+    },
+    logout() {
+      this.$store.dispatch('setToken', null)
+      this.$store.dispatch('setUser', null)
+      this.$router.push({
+        name: 'LoginPage'
+      })
+    }
+  }
 }
+
 </script>
 
 <style lang="scss">

@@ -1,0 +1,21 @@
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .menu{
+        margin:2% 0 5% 0; 
+    }
+    .charts{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 85vw;
+        align-content: center;
+        .bar-chart{
+            width: 41vw;
+        }
+        .doughnut-chart{
+            width: 41vw;
+        }
+    }
+}
