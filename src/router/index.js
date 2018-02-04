@@ -9,6 +9,7 @@ import HistoryPage from '@/components/historyPage/HistoryPage'
 import StatisticPage from '@/components/statisticPage/StatisticPage'
 import StatLoan from '@/components/statisticPage/statLoan/StatLoan'
 import StatMain from '@/components/statisticPage/statMain/StatMain'
+import StatUser from '@/components/statisticPage/statUser/StatUser'
 
 Vue.use(Router)
 
@@ -53,6 +54,11 @@ export default new Router({
       path: '/mainStatistic',
       name: 'StatMain',
       component: StatMain
+    },
+    {
+      path: '/userStatistic',
+      name: 'StatUser',
+      component: StatUser
     }
   ]
 })

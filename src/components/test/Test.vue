@@ -29,8 +29,7 @@ import 'moment-timezone'
 export default {
     data () {
         return{
-            inside: null,
-             logs: null
+            inside: null
         }
     },
     async mounted () {

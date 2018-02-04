@@ -1,7 +1,7 @@
 /* jshint indent: 2 */
 
 module.exports = function (sequelize, DataTypes) {
-  return sequelize.define('dostep', {
+  const Access = sequelize.define('Access', {
     id: {
       type: DataTypes.INTEGER(11),
       allowNull: false,
@@ -42,4 +42,5 @@ module.exports = function (sequelize, DataTypes) {
   }, {
     tableName: 'dostep'
   })
+  return Access
 }

@@ -1,10 +1,11 @@
 /* jshint indent: 2 */
 
-module.exports = function(sequelize, DataTypes) {
+module.exports = function (sequelize, DataTypes) {
   return sequelize.define('wypozyczeniaLog', {
     id: {
       type: DataTypes.INTEGER(11),
-      allowNull: false
+      allowNull: false,
+      primaryKey: true
     },
     barcode: {
       type: DataTypes.BIGINT,
@@ -17,5 +18,5 @@ module.exports = function(sequelize, DataTypes) {
     }
   }, {
     tableName: 'wypozyczeniaLog'
-  });
-};
+  })
+}

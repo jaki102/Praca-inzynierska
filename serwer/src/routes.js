@@ -4,6 +4,8 @@ const UserInsideController = require('./controllers/UserInsideController')
 const LoansController = require('./controllers/LoansController')
 const LogController = require('./controllers/LogController')
 const StatDaysController = require('./controllers/StatDaysController')
+const SetUserController = require('./controllers/SetUserController')
+const StatUserController = require('./controllers/StatUserController')
 
 module.exports = (app) => {
   app.post('/register',
@@ -27,4 +29,10 @@ module.exports = (app) => {
 
   app.get('/mainStatistic',
     StatDaysController.StatDaysInfo)
+
+  app.get('/getUser',
+    SetUserController.getUser)
+
+  app.get('/userStatistic',
+    StatUserController.StatUserInfo)
 }

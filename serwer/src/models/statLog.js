@@ -1,10 +1,11 @@
 /* jshint indent: 2 */
 
-module.exports = function(sequelize, DataTypes) {
+module.exports = function (sequelize, DataTypes) {
   return sequelize.define('statLog', {
     id: {
       type: DataTypes.INTEGER(11),
-      allowNull: false
+      allowNull: false,
+      primaryKey: true
     },
     date: {
       type: DataTypes.DATEONLY,
@@ -28,5 +29,5 @@ module.exports = function(sequelize, DataTypes) {
     }
   }, {
     tableName: 'statLog'
-  });
-};
+  })
+}

@@ -7,7 +7,7 @@
                 <vue-chart class = "bar-chart" type="bar" :data="chartData"></vue-chart>
             </div>
             <div>
-                <span></span>
+                <span>Liczba wejść w poszczególnych dniach tygodnia</span>
                 <vue-chart class = "doughnut-chart" type="doughnut" :data="chartData2" ></vue-chart>
             </div>
         </div>
@@ -19,6 +19,7 @@
 import VueChart from 'vue-chart-js'
 import StatMainService from '@/services/StatMainService'
 import Vue from 'vue'
+import moment from 'moment'
 export default {
   name: 'App',
  
@@ -54,7 +55,23 @@ export default {
     },
 
     async mounted () {
-        this.statDays = (await StatMainService.StatDaysInfo()).data
+        const tempData = (await StatMainService.StatDaysInfo()).data
+        this.chartData = this.mapChartMinutes(tempData)
+        this.chartData2 = this.mapChartQuantity(tempData)
+    },
+
+    methods: {
+        mapChartMinutes(data) {
+            const minutes = data.map(day => (day.minutes / 60).toFixed(1));
+            this.chartData.datasets[0].data = minutes
+            return data
+        },
+
+        mapChartQuantity(data) {
+            const quantity = data.map(day => day.quantity);
+            this.chartData2.datasets[0].data = quantity
+            return data
+        }
     }
 
  
